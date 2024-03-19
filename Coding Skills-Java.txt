@@ -1,0 +1,323 @@
+//DIGIT COUNT
+
+public class Digitcount   
+{  
+	public static void main(String[] args)   
+	{  
+		int n=1234;
+		int count=0;
+		while(n>0)
+		{
+			n=n/10;
+			count++;
+		}
+		System.out.println("The digit count is:"+ count);  
+	}  
+}
+
+
+//SUM OF DIGITS
+
+import java.util.Scanner;  
+public class SumOfDigits
+{  
+	public static void main(String args[])  
+	{  
+		int number, digit, sum = 0;  
+		Scanner sc = new Scanner(System.in);  
+		System.out.print("Enter the number: ");  
+		number = sc.nextInt();  
+		
+		while(number > 0)  
+		{  
+			digit = number % 10;  
+			sum = sum + digit;  
+			number = number / 10;  
+		}  
+	
+	System.out.println("Sum of Digits: "+sum);  
+	}  
+}  
+
+//REVERSING A NUMBER
+
+public class ReverseNumber   
+{  
+	public static void main(String[] args)   
+	{  
+		int number = 987654, reverse = 0;  
+		while(number != 0)   
+		{  
+			int remainder = number % 10;  
+			reverse = reverse * 10 + remainder;  
+			number = number/10;  
+		}  
+		System.out.println("The reverse of the given number is: " + reverse);  
+	}  
+}
+
+//READING A CHARACTER IN JAVA 
+
+import java.util.Scanner;   
+public class Characterdemo  
+{   
+	public static void main(String[] args)   
+	{   
+		Scanner sc = new Scanner(System.in);   
+		System.out.print("Input a character: ");  
+		// reading a character   
+		char c = sc.next().charAt(0);   
+		//prints the character   
+		System.out.println("You have entered "+c);   
+	}   
+}  
+
+// PALINDROME NUMBER
+import java.util.*;   
+class Palindrome 
+{  
+   public static void main(String args[])  
+   {  
+      String original, reverse = ""; 
+      Scanner in = new Scanner(System.in);   
+      System.out.println("Enter a string/number to check if it is a palindrome");  
+      original = in.nextLine();   
+      int length = original.length();   
+      for ( int i = length - 1; i >= 0; i-- )  
+         reverse = reverse + original.charAt(i);  
+      if (original.equals(reverse))  
+         System.out.println("Entered string/number is a palindrome.");  
+      else  
+         System.out.println("Entered string/number isn't a palindrome.");   
+   }  
+}  
+
+// PALINDROME NUMBER using STRINGBUILDER
+import java.util.Scanner;   
+class Palindrome 
+{  
+   public static void main(String args[])  
+   {  
+      Scanner in = new Scanner(System.in);   
+      System.out.println("Enter a string/number to check if it is a palindrome");  
+      String original = in.nextLine();   
+      StringBuilder sb=new StringBuilder(original);
+	  String reverse=sb.reverse().toString();
+	  
+	  if (original.equals(reverse))  
+         System.out.println("Entered string/number is a palindrome.");  
+      else  
+         System.out.println("Entered string/number isn't a palindrome.");   
+   }  
+}  
+
+//PRINT FIRST TO LAST
+
+public class firsttolast o/p: 12345   
+{  
+	public static void main(String[] args)   
+	{  
+		int first=1;
+		int last=5		
+		while(first<=last)   
+		{  
+			System.out.print(first);  
+			first=first+1;  
+		}  
+		
+	}  
+}
+
+//PRINT LAST TO FIRST
+
+public class lasttofirst o/p: 543210   
+{  
+	public static void main(String[] args)   
+	{  
+		int last=5;  
+		while(last>=0)   
+		{  
+			System.out.print(last);  
+			last=last-1;  
+		}  
+		
+	}  
+}
+
+//FACTORIAL PROGRAM
+class Factorial
+{  
+	static int factorial(int n)
+	{    
+		if (n == 0)    
+		return 1;    
+		else    
+		return(n * factorial(n-1));    
+	}    
+	public static void main(String args[])
+	{  
+		int i,fact=1;  
+		int number=4;
+		fact = factorial(number);   
+		System.out.println("Factorial of "+number+" is: "+fact);    
+	}  
+} 
+
+//FIBONACCI PROGRAM
+
+class Fibonacci
+{  
+	public static void main(String args[])  
+	{    
+		int n1=0,n2=1,n3,i,count=10;    
+		System.out.print(n1+" "+n2);//printing 0 and 1    
+    
+		for(i=2;i<count;++i)//loop starts from 2 because 0 and 1 are already printed    
+		{    
+			n3=n1+n2;    
+			System.out.print(" "+n3);    
+			n1=n2;    
+			n2=n3;    
+		}    
+  
+	}
+}
+
+//MULTIPLICATION TABLE(While Loop)
+
+public class Multiply
+{
+     public static void main(String []args)
+     {
+        System.out.println("Enter the number: ");
+        int n=5;      
+        int i=1;
+        System.out.println("The multiplication table of "+n+" is: ");
+        while(i<=10)
+        {
+           System.out.println(n+" * "+i+" = "+ (n*i));
+            i++;
+        }  
+     }
+}
+
+// SUM OF POSITIVE NUMBERS using do-while loop
+public class DoWhile
+{    
+	public static void main(String[] args)
+	{    
+		int i=1;    
+		do{    
+        System.out.println(i);    
+		i++;    
+		}while(i<=10);    
+	}    
+} 
+
+
+//PRINTING NUMBERS USING (BREAK)
+public class breakdemo 
+{
+  public static void main(String[] args) 
+  {
+	int number=0;
+	while(number<10)
+	{
+		number=number+1;
+		if(number==5)
+		break;
+		
+		System.out.print(number);
+	}	
+	System.out.print("After the break"); 
+  }
+}
+
+
+//PRINTING NUMBERS USING (CONTINUE)
+public class continuedemo 
+{
+  public static void main(String[] args) 
+  {
+	System.out.println("The elements are: ");
+       for(int i=1;i<=10;i++)
+       {
+           if(i==6)
+           {
+               continue;
+           }
+           System.out.println(i);
+		}	
+	}
+}
+
+//PRINTING PRIME NUMBERS
+
+public class prime 
+{
+  public static void main(String[] args) 
+  {
+	int n,i,count=0;
+	n=5;
+	for(i=1;i<=n;i++)
+	{
+		if(n%i==0)
+		count++;
+	}
+	if(count==2)
+	System.out.print("Its prime");
+	else
+	System.out.print("Not a prime");
+	
+	}	
+	
+  }
+
+//OPTIMIZED PRINTING PRIME NUMBERS
+
+public class PrimeChecker {
+    public static boolean isPrime(int num) {
+        if (num < 2) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int number = 17;
+        if (isPrime(number)) {
+            System.out.println(number + " is a prime number.");
+        } else {
+            System.out.println(number + " is not a prime number.");
+        }
+    }
+}
+
+
+// *****
+// *****
+// *****
+// *****
+// *****
+public class pattern1
+{
+	public static void main(String[] args)
+	{
+		int i,j;
+		
+		for(i=1;i<=5;i++)
+		{
+			for(j=1;j<=5;j++)
+			{
+				System.out.print("*");
+			}
+		System.out.println();
+		}
+	
+	}
+}
